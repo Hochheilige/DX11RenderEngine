@@ -3,7 +3,7 @@
 #include <iostream>
 #include <chrono>
 
-#include <Window.h>
+#include <Renderer.h>
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT umessage, WPARAM wparam, LPARAM lparam)
 {
@@ -24,11 +24,12 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT umessage, WPARAM wparam, LPARAM lparam)
 	}
 }
 
+
 int main() {
 
 	HINSTANCE hInstance = GetModuleHandle(nullptr);
-	Window window;
-	window.Initialize(hInstance, WndProc);
+	Renderer* renderer = Renderer::GetInstance();
+	renderer->Initialize(hInstance, WndProc);
 
 	std::chrono::time_point<std::chrono::steady_clock> prev_time = std::chrono::steady_clock::now();
 	float total_time = 0;
@@ -46,6 +47,10 @@ int main() {
 			is_exit_requested = true;
 		}
 
+		renderer->Clear();
+		renderer->Swap();
+
+
 		auto current_time = std::chrono::steady_clock::now();
 		float delta_time = std::chrono::duration_cast<std::chrono::microseconds>(current_time - prev_time).count() / 1000000.0f;
 		prev_time = current_time;
@@ -60,7 +65,7 @@ int main() {
 
 			WCHAR text[256];
 			swprintf_s(text, TEXT("FPS: %f"), fps);
-			SetWindowText(window.GetWindow(), text);
+			SetWindowText(renderer->GetWindow(), text);
 
 			frame_count = 0;
 		}

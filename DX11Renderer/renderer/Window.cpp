@@ -2,7 +2,7 @@
 
 Window::Window()
 	: instance(nullptr), wndproc(nullptr),
-	  width(800), height(600), is_fullscreen(false) {
+	  width(800), height(600), posX(0), posY(0) {
 }
 
 Window::~Window() {
@@ -42,12 +42,6 @@ bool Window::Initialize(const HINSTANCE inst, const WNDPROC proc) {
 	int width = R.right - R.left;
 	int height = R.bottom - R.top;
 
-	if (is_fullscreen)
-	{
-		posX = 0;
-		posY = 0;
-	}
-
 	auto dx_style = WS_SYSMENU | WS_CAPTION | WS_MINIMIZEBOX | WS_THICKFRAME;
 
 	window = CreateWindowEx(	
@@ -84,7 +78,6 @@ bool Window::Initialize(const HINSTANCE inst, const WNDPROC proc) {
 void Window::SetMode(const int x, const int y, const int w, const int h, const bool fullscreen) {
 	width = w;
 	height = h;
-	is_fullscreen = fullscreen;
 	posX = x;
 	posY = y;
 }
@@ -105,6 +98,3 @@ uint32_t Window::GetHeight() {
 	return height;
 }
 
-bool Window::IsFullscreen() {
-	return is_fullscreen;
-}

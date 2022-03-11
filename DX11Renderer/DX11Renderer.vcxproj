@@ -147,10 +147,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="renderer\dxerr.cpp" />
+    <ClCompile Include="renderer\Renderer.cpp" />
     <ClCompile Include="renderer\Window.cpp" />
     <ClCompile Include="TestApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="renderer\dxerr.h" />
+    <ClInclude Include="renderer\Renderer.h" />
+    <ClInclude Include="renderer\Utils.h" />
     <ClInclude Include="renderer\Window.h" />
     <ClInclude Include="renderer\WndDxIncludes.h" />
   </ItemGroup>

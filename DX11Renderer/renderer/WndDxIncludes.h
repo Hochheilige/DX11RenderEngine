@@ -1,5 +1,6 @@
 #pragma once
 
+
 #include <windows.h>
 #include <wrl.h>
 #include <dxgi1_4.h>
@@ -11,6 +12,8 @@
 #include <DirectXColors.h>
 #include <DirectXCollision.h>
 #include <comdef.h>
+
+#include <dxerr.h>
 
 #include <stdio.h>
 

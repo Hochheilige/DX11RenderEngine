@@ -19,21 +19,17 @@ public:
 	uint32_t GetWidth();
 	uint32_t GetHeight();
 
-	bool IsFullscreen();
-
 private:
 	HWND window;
 	HINSTANCE instance;
 	WNDPROC wndproc;
 
 private:
-	int width;
-	int height;
+	uint32_t width;
+	uint32_t height;
 	int posX;
 	int posY;
 
-	bool is_fullscreen;
-
-	LPCWSTR title = L"Quake 2 DX11";
-	LPCWSTR window_class_name = L"Quake 2";
+	LPCWSTR title = L"DX11Renderer";
+	LPCWSTR window_class_name = L"Renderer";
 };
