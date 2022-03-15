@@ -14,22 +14,22 @@ public:
 	bool Initialize(HINSTANCE inst, WNDPROC proc);
 	void SetMode(const int x, const int y, const int w, const int h, const bool fullscreen);
 
-	HWND GetWindow();
+	HWND      GetWindow();
 	HINSTANCE GetInstance();
+
 	uint32_t GetWidth();
 	uint32_t GetHeight();
 
 private:
-	HWND window;
+	HWND      window;
 	HINSTANCE instance;
-	WNDPROC wndproc;
+	WNDPROC   wndproc;
 
 private:
 	uint32_t width;
 	uint32_t height;
-	int posX;
-	int posY;
+	int      posX;
+	int      posY;
 
 	LPCWSTR title = L"DX11Renderer";
-	LPCWSTR window_class_name = L"Renderer";
 };

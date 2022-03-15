@@ -73,7 +73,6 @@ bool Renderer::Initialize(const HINSTANCE instance, const WNDPROC wndproc) {
 		swap_chain_desc.OutputWindow = window->GetWindow();
 		swap_chain_desc.SampleDesc.Count = 1;
 		swap_chain_desc.SampleDesc.Quality = 0;
-		swap_chain_desc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 		swap_chain_desc.Windowed = TRUE;
 		swap_chain_desc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
 
@@ -193,13 +192,19 @@ ID3D11DepthStencilView* Renderer::GetDepthStencilView() {
 	return depth_stencil_view;
 }
 
+float Renderer::GetWindowWidth()
+{
+	return static_cast<float>(window->GetWidth());
+}
+
+float Renderer::GetWindowHeight()
+{
+	return static_cast<float>(window->GetHeight());
+}
+
 HWND Renderer::GetWindow()
 {
 	return window->GetWindow();
-}
-
-std::tuple<float, float> Renderer::GetWindowParameters() {
-	return { static_cast<float>(window->GetWidth()), static_cast<float>(window->GetHeight()) };
 }
 
 void Renderer::Clear() {

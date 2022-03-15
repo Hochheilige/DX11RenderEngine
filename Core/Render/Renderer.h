@@ -31,38 +31,11 @@ struct ShaderOptions
 	int entrys;
 };
 
-class Renderer {
-
-private:
-	Renderer();
-
-private:
-	Window*                  window;
-	ID3D11Device*            device;
-	ID3D11DeviceContext*     context;
-	IDXGISwapChain*          swap_chain;
-	ID3D11RenderTargetView*  render_target_view;
-	ID3D11DepthStencilView*  depth_stencil_view;
-	ID3D11DepthStencilState* depth_stencil_state;
-
-	D3D11_VIEWPORT viewport;
-
-	D3D_DRIVER_TYPE driver_type;
-
-	ID3DUserDefinedAnnotation* perf;
-
-	ID3D11SamplerState* sampler;
-
-	bool is_initialized;
-
-private:
-	static Renderer* renderer;
-
+class Renderer final {
 public:
 	Renderer(const Renderer&) = delete;
 	Renderer(Renderer&&) = delete;
 	Renderer& operator=(const Renderer&) = delete;
-
 
 	~Renderer();
 
@@ -77,20 +50,40 @@ public:
 public:
 
 	void Clear();
-
 	void Swap();
 
-	ID3D11Device* GetDevice();
-
-	ID3D11DeviceContext* GetContext();
-
-	IDXGISwapChain* GetSwapChain();
-
+	ID3D11Device*           GetDevice();
+	ID3D11DeviceContext*    GetContext();
+	IDXGISwapChain*         GetSwapChain();
 	ID3D11RenderTargetView* GetRenderTargetView();
-
-	std::tuple<float, float> GetWindowParameters();
-
 	ID3D11DepthStencilView* GetDepthStencilView();
 
+	float GetWindowWidth();
+	float GetWindowHeight();
+
 	HWND GetWindow();
+
+private:
+	Renderer();
+
+private:
+	Window*                  window;
+	ID3D11Device*            device;
+	ID3D11DeviceContext*     context;
+	IDXGISwapChain*          swap_chain;
+	ID3D11RenderTargetView*  render_target_view;
+	ID3D11DepthStencilView*  depth_stencil_view;
+	ID3D11DepthStencilState* depth_stencil_state;
+
+	D3D11_VIEWPORT  viewport;
+	D3D_DRIVER_TYPE driver_type;
+
+	ID3DUserDefinedAnnotation* perf;
+
+	ID3D11SamplerState* sampler;
+
+	bool is_initialized;
+
+private:
+	static Renderer* renderer;
 };
