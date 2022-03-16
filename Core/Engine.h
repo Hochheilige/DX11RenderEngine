@@ -4,7 +4,6 @@
 #include <chrono>
 #include <memory>
 
-#include <Window.h>
 #include <Renderer.h>
 
 class Engine {

@@ -98,7 +98,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\Window\;$(SolutionDir)Core\Engine\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Render\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\Renderer\\States\;$(SolutionDir)Core\Renderer\PipelineFactory\;$(SolutionDir)Core\Renderer\Bindable\;$(SolutionDir)Core\Renderer\Window\;$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Renderer\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,7 +118,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\Window\;$(SolutionDir)Core\Engine\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Render\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\Renderer\\States\;$(SolutionDir)Core\Renderer\PipelineFactory\;$(SolutionDir)Core\Renderer\Bindable\;$(SolutionDir)Core\Renderer\Window\;$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Renderer\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,7 +138,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\Window\;$(SolutionDir)Core\Engine\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Render\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\Renderer\\States\;$(SolutionDir)Core\Renderer\PipelineFactory\;$(SolutionDir)Core\Renderer\Bindable\;$(SolutionDir)Core\Renderer\Window\;$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Renderer\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,7 +158,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\Window\;$(SolutionDir)Core\Engine\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Render\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\Renderer\\States\;$(SolutionDir)Core\Renderer\PipelineFactory\;$(SolutionDir)Core\Renderer\Bindable\;$(SolutionDir)Core\Renderer\Window\;$(ProjectDir);$(SolutionDir)Core\;$(SolutionDir)Core\EventSystem\;$(SolutionDir)Core\Renderer\;$(SolutionDir)Core\Utils;%(AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

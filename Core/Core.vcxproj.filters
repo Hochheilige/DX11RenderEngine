@@ -1,51 +1,143 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{5bf5f64b-ab6b-4786-9d9c-3c791208c0ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Renderer\States">
+      <UniqueIdentifier>{8d5f9595-ed8a-4d93-908d-c80138f1e4ce}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Renderer\PipelineFactory">
+      <UniqueIdentifier>{9c5f0109-d74d-418a-92ea-5e1d0ac7164b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\Bindable">
+      <UniqueIdentifier>{7250d4b2-ce63-47c3-88e4-0f47c2c4d106}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EventSystem">
+      <UniqueIdentifier>{0938cd54-aad2-4292-a514-7793c51caf1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{daf9339b-a8e5-47cc-ada9-d071a0f0c306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\Window">
+      <UniqueIdentifier>{e1ddc414-3eb5-499b-9098-4f99dd78ce0d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Window\Window.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Renderer\States\BlendState.cpp">
+      <Filter>Renderer\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\States\DepthStencilState.cpp">
+      <Filter>Renderer\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\States\InputLayout.cpp">
+      <Filter>Renderer\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\States\RasterizationState.cpp">
+      <Filter>Renderer\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Bindable\GeometryShader.cpp">
+      <Filter>Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Bindable\IndexBuffer.cpp">
+      <Filter>Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Bindable\PixelShader.cpp">
+      <Filter>Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Bindable\VertexBuffer.cpp">
+      <Filter>Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Bindable\VertexShader.cpp">
+      <Filter>Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\PipelineFactory\PipelineFactory.cpp">
+      <Filter>Renderer\PipelineFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\PipelineFactory\PipelineState.cpp">
+      <Filter>Renderer\PipelineFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Window\Window.cpp">
+      <Filter>Renderer\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="Utils\dxerr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Render\Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Engine.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window\Window.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\States\BlendState.h">
+      <Filter>Renderer\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\States\DepthStencilState.h">
+      <Filter>Renderer\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\States\InputLayout.h">
+      <Filter>Renderer\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\States\RasterizationState.h">
+      <Filter>Renderer\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\States\States.h">
+      <Filter>Renderer\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\States\Topology.h">
+      <Filter>Renderer\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\Bindable.h">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\ConstantBuffer.hpp">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\GeometryShader.h">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\IndexBuffer.h">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\PixelShader.h">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\Shader.h">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\VertexBuffer.h">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Bindable\VertexShader.h">
+      <Filter>Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\PipelineFactory\IStateProvider.h">
+      <Filter>Renderer\PipelineFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\PipelineFactory\PipelineFactory.h">
+      <Filter>Renderer\PipelineFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\PipelineFactory\PipelineState.h">
+      <Filter>Renderer\PipelineFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Window\Window.h">
+      <Filter>Renderer\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Utils\WndDxIncludes.h">
+      <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="Utils\dxerr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Utils\Utils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Utils\WndDxIncludes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Render\Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Engine.h">
-      <Filter>Header Files</Filter>
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

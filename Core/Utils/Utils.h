@@ -1,5 +1,7 @@
 #pragma once
 
+#include <WndDxIncludes.h>
+
 #if defined(DEBUG) | defined(_DEBUG)
 
 #ifndef DXCHECK
@@ -19,3 +21,5 @@
 
 #endif
 
+ID3DBlob* CompileShader(const wchar_t* filename, const D3D_SHADER_MACRO* defines,
+	const char* entrypoint, const char* target);
